@@ -137,9 +137,9 @@ body {
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/* Add a blue background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: white;
+  background-color: blue;
 }
 
 /* Dropdown content (hidden by default) */
@@ -180,7 +180,7 @@ body {
 </div>
 
 <div class="navbar">
-  <div class="dropdown">
+  <div class="dropdown" onclick="myFunction()">
     <button class="dropbtn">Languages
       <i class="fa fa-caret-down"></i>
     </button>
@@ -196,7 +196,10 @@ body {
     <h2>About Me</h2>
     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
     <h3>Ways to contact me</h3>
-    <a href="skype:+1234567890?call">Call Me</a>
+    <p>
+      <i style="font-size:24px" class="fa">&#xf17e;</i>
+      <a href="skype:+1234567890?call">Skype</a>
+    </p>
   </div>
   <div class="main">
     <h2>Lesson 1</h2>
@@ -216,6 +219,24 @@ body {
 <div class="footer">
   <h2>Teaching Assistant Lessons 2020</h2>
 </div>
+ 
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>  
+  
 </body>
 </html>
