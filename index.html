@@ -119,30 +119,27 @@ body {
   }
 }
   
-/* The dropdown container */
 .dropdown {
   float: left;
   overflow: hidden;
 }
 
-/* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 16px;
+  cursor: pointer;
+  font-size: 16px;  
   border: none;
   outline: none;
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit;
+  margin: 0;
 }
 
-/* Add a blue background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: blue;
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: green;
 }
 
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -152,7 +149,6 @@ body {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   float: none;
   color: black;
@@ -162,13 +158,11 @@ body {
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.show {
   display: block;
 }
 </style>
@@ -184,7 +178,7 @@ body {
     <button class="dropbtn">Languages
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown-content" id="myDropdown">
       <a href="./index.html"></a>
       <a href="./index_en.html"></a>
     </div>
